@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoGame37Cross/Player.cs">
+    <Files>
+      <File FileName="MonoGame37Cross/Projectile.cs" Line="16" Column="10" />
+      <File FileName="MonoGame37Cross/Player.cs" Line="26" Column="31" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WeirdGame.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

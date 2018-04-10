@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoGame37Cross/Player.cs">
+    <Files>
+      <File FileName="MonoGame37Cross/Game1.cs" Line="20" Column="29" />
+      <File FileName="MonoGame37Cross/Projectile.cs" Line="26" Column="1" />
+      <File FileName="MonoGame37Cross/Player.cs" Line="2" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MonoGame37Cross" expanded="True">
+            <Node name="MonoGame37Cross.Desktop" expanded="True" selected="True">
+              <Node name="References" expanded="True">
+                <Node name="From Packages" expanded="True" />
+              </Node>
+              <Node name="Packages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MonoGame37Cross.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

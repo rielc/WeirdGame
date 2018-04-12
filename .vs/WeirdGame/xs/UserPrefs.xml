@@ -2,7 +2,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="MonoGame37Cross/Player.cs">
     <Files>
       <File FileName="MonoGame37Cross/Projectile.cs" Line="16" Column="10" />
-      <File FileName="MonoGame37Cross/Player.cs" Line="26" Column="31" />
+      <File FileName="MonoGame37Cross/Player.cs" Line="16" Column="30" />
+      <File FileName="MonoGame37Cross/Program.cs" Line="1" Column="1" />
+      <File FileName="MonoGame37Cross/Game1.cs" Line="57" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WeirdGame.Desktop PreferredExecutionTarget="MonoDevelop.Default" />

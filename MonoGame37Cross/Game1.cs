@@ -16,6 +16,7 @@ namespace MonoGame37Cross.Desktop
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;		
         Vector2 ballPosition;
+        Player player;
         float ballSpeed;
         int lastBulletIndex;
 
@@ -23,6 +24,7 @@ namespace MonoGame37Cross.Desktop
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            player = new Player();
         }
 
         protected override void Initialize()
@@ -39,6 +41,15 @@ namespace MonoGame37Cross.Desktop
             spriteBatch = new SpriteBatch(GraphicsDevice);
             textureBall = Content.Load<Texture2D>("player");
             textureBullet = Content.Load<Texture2D>("bullet");
+
+            player.Initialize(spriteBatch, textureBall);
+            player.SetViewport(graphics.GraphicsDevice.Viewport);
+            player.SetPosition(
+                new Vector2(
+                    graphics.GraphicsDevice.Viewport.Width / 2,
+                    graphics.GraphicsDevice.Viewport.Height / 2
+                )
+            );
         }
 
         protected override void UnloadContent()
@@ -59,8 +70,11 @@ namespace MonoGame37Cross.Desktop
             var isRight= kstate.IsKeyDown(Keys.Right) || gState.DPad.Right == ButtonState.Pressed;
             var isLeft = kstate.IsKeyDown(Keys.Left) || gState.DPad.Left == ButtonState.Pressed;
 
-            var isShooting= gState.Buttons.A == ButtonState.Pressed;
+            var isShooting = gState.Buttons.A == ButtonState.Pressed;
+            var isJumping = gState.Buttons.B == ButtonState.Pressed;
 
+            player.Update(gameTime);
+            if (isJumping) player.Jump(gState.ThumbSticks.Left);
 
             if (isShooting) {
                 var bullet = new Projectile();
@@ -101,6 +115,7 @@ namespace MonoGame37Cross.Desktop
             GraphicsDevice.Clear(Color.Black);
 			spriteBatch.Begin();
             spriteBatch.Draw(textureBall, ballPosition, Color.White);
+            player.Draw(gameTime);
             //for (int i = 0; i < bullets.Length; i++)
             //{
             //    bullets[i].Draw(spriteBatch, textureBullet);

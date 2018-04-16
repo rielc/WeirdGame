@@ -13,10 +13,12 @@ namespace MonoGame37Cross.Desktop
         List<Projectile> bullets;
         Texture2D textureBall;
         Texture2D textureBullet;
+        Texture2D playerSprite;
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;		
+        SpriteBatch spriteBatch;
         Vector2 ballPosition;
         Player player;
+        AnimatedSprite playerAnimation;
         float ballSpeed;
         int lastBulletIndex;
 
@@ -30,7 +32,7 @@ namespace MonoGame37Cross.Desktop
         protected override void Initialize()
         {
             ballPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
-            ballSpeed = 300f;
+            ballSpeed = 200f;
             bullets = new List<Projectile>();
             lastBulletIndex = 0;
             base.Initialize();
@@ -41,6 +43,8 @@ namespace MonoGame37Cross.Desktop
             spriteBatch = new SpriteBatch(GraphicsDevice);
             textureBall = Content.Load<Texture2D>("player");
             textureBullet = Content.Load<Texture2D>("bullet");
+            playerSprite = Content.Load<Texture2D>("char_side_highres");
+            playerAnimation = new AnimatedSprite(playerSprite, 1, 10, 36, 48, 10);
 
             player.Initialize(spriteBatch, textureBall);
             player.SetViewport(graphics.GraphicsDevice.Viewport);
@@ -50,6 +54,7 @@ namespace MonoGame37Cross.Desktop
                     graphics.GraphicsDevice.Viewport.Height / 2
                 )
             );
+            AseSpriteAnimation test = new AseSpriteAnimation("mustache");
         }
 
         protected override void UnloadContent()
@@ -70,7 +75,16 @@ namespace MonoGame37Cross.Desktop
             var isRight= kstate.IsKeyDown(Keys.Right) || gState.DPad.Right == ButtonState.Pressed;
             var isLeft = kstate.IsKeyDown(Keys.Left) || gState.DPad.Left == ButtonState.Pressed;
 
-            var isShooting = gState.Buttons.A == ButtonState.Pressed;
+
+            if (isDown || isUp || isRight || isLeft) {
+                playerAnimation.play();
+            } else {
+                playerAnimation.stop();
+            }
+
+            playerAnimation.Update(gameTime);
+
+            var isShooting = true; // gState.Buttons.A == ButtonState.Pressed;
             var isJumping = gState.Buttons.B == ButtonState.Pressed;
 
             player.Update(gameTime);
@@ -78,7 +92,7 @@ namespace MonoGame37Cross.Desktop
 
             if (isShooting) {
                 var bullet = new Projectile();
-                bullet.Initialize(ballPosition);
+                bullet.Initialize(ballPosition, bullets.Count);
                 bullets.Add(bullet);
             }
 
@@ -112,20 +126,17 @@ namespace MonoGame37Cross.Desktop
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
-			spriteBatch.Begin();
-            spriteBatch.Draw(textureBall, ballPosition, Color.White);
-            player.Draw(gameTime);
-            //for (int i = 0; i < bullets.Length; i++)
-            //{
-            //    bullets[i].Draw(spriteBatch, textureBullet);
-            //}
+            //GraphicsDevice.SamplerStates[0] = SamplerState.PointClamp;
+            GraphicsDevice.Clear(Color.White);
+            spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            playerAnimation.Draw(spriteBatch, ballPosition, 0);
 
             foreach (var bullet in bullets)
             {
-                bullet.Draw(spriteBatch, textureBullet);
+                playerAnimation.Draw(spriteBatch, bullet.position, bullet.index);
             }
 
+            playerAnimation.Draw(spriteBatch, player.position, 0);
             spriteBatch.End();
             base.Draw(gameTime);
         }

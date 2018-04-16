@@ -23,3 +23,10 @@
 /Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/obj/Release/WeirdGame.Desktop.csproj.CoreCompileInputs.cache
 /Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/obj/Release/MonoGame37Cross.exe
 /Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/obj/Release/MonoGame37Cross.pdb
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Content/sprite-test.xnb
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Content/char-side.xnb
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Content/char_side_highres.xnb
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Content/assets/asesprites/mustache.xnb
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Newtonsoft.Json.dll
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Newtonsoft.Json.xml
+/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/bin/DesktopGL/AnyCPU/Release/Content/assets/asesprites/mustache.json

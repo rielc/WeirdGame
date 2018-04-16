@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoGame37Cross/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoGame37Cross/Game1.cs">
     <Files>
-      <File FileName="MonoGame37Cross/Projectile.cs" Line="16" Column="10" />
-      <File FileName="MonoGame37Cross/Player.cs" Line="16" Column="30" />
+      <File FileName="MonoGame37Cross/Projectile.cs" Line="11" Column="28" />
+      <File FileName="MonoGame37Cross/Player.cs" Line="70" Column="39" />
       <File FileName="MonoGame37Cross/Program.cs" Line="1" Column="1" />
-      <File FileName="MonoGame37Cross/Game1.cs" Line="57" Column="38" />
+      <File FileName="MonoGame37Cross/Game1.cs" Line="74" Column="28" />
+      <File FileName="MonoGame37Cross/AnimatedSprite.cs" Line="26" Column="39" />
+      <File FileName="MonoGame37Cross/AnimatedAseSprite.cs" Line="24" Column="14" />
+      <File FileName="MonoGame37Cross/Content/assets/asesprites/mustache.json" Line="6" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WeirdGame.Desktop PreferredExecutionTarget="MonoDevelop.Default" />

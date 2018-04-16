@@ -5,6 +5,9 @@
   <Config />
   <SourceFiles>
     <File>/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/Content/bullet.png</File>
+    <File>/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/Content/char_side_highres.png</File>
+    <File>/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/Content/char-side.png</File>
     <File>/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/Content/player.png</File>
+    <File>/Users/gabriel/Private/MonoGame37Cross/MonoGame37Cross/Content/sprite-test.png</File>
   </SourceFiles>
 </SourceFileCollection>
